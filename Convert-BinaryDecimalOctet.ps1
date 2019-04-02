@@ -1,6 +1,3 @@
-<# introducing my big f!ing laziness... could have waited for this shitty ass 300kbps internet, but decided to write
-my own effing simple binary octet convertor... #>
-
 <#
     .SYNOPSIS
         Decimal/Binary Conversion Functions
@@ -48,8 +45,8 @@ function Convert-BinOctetToDec ([string]$octet){
             foreach ($e in (7..0)){
                 if ($octet[$i] -eq '1'){
                     $dec += [System.Math]::Pow(2,$e)
-                    $i++
                 }
+                $i++
             }
             if ($dec -gt 255){
                 return -4
